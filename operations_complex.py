@@ -1,5 +1,5 @@
 def Insert_Numbers():
-    # Function invite user for insert two komplex numbers and operation between it 
+
     print('Тип комплексного числа: a + bi\n')
     user_komplex1 = input('Вставить первое комплексное число: ')
     user_komplex2 = input('Вставить последнее комплексное число: ')
@@ -9,7 +9,7 @@ def Insert_Numbers():
     return [user_komplex1, user_komplex2, operation]
 
 def Take_Rational_Part(user_number):
-    # Function return rational part from komplex
+   
     rational_part = []
     for k in range(0, len(user_number)):
         if user_number[k] != ' ':
@@ -20,7 +20,7 @@ def Take_Rational_Part(user_number):
     return rational_part
 
 def Take_Imaginary_Part(user_number):
-    # Function return imaginary part
+    
     imaginary_part = []
     for i in range(0, len(user_number)):
         if user_number[i] == 'i':
@@ -32,7 +32,7 @@ def Take_Imaginary_Part(user_number):
     return imaginary_part
 
 def Take_Symbol(user_number):
-    #Function return - or + between rational and imaginary parts
+    
     symbol = []
     for l in range(0, len(user_number)):
         if user_number[l] == '-' and l !=0 or user_number[l] == '+' and l != 0:
@@ -41,7 +41,7 @@ def Take_Symbol(user_number):
     return symbol
 
 def Addition(r1, s1, i1, r2, s2, i2):
-    # Function add two komplex numbers
+    
     result = []
     result.append(r1+r2)
     if s1 == '+' and s2 == '+':
@@ -55,7 +55,7 @@ def Addition(r1, s1, i1, r2, s2, i2):
     return result
 
 def Deduction(r1, s1, i1, r2, s2, i2):
-    # Function deduction second komplex number from first
+    
     result = []
     result.append(r1-r2)
     if s1 == '+' and s2 == '+':
@@ -69,7 +69,7 @@ def Deduction(r1, s1, i1, r2, s2, i2):
     return result
 
 def Multiply(r1, s1, i1, r2, s2, i2):
-    # Function multiply two komplex numbers
+    
     result = []
     result.append(r1*r2)
     if s1 == "+" and s2 == "+" or s1 == "-" and s2 == "-":
@@ -91,7 +91,7 @@ def Multiply(r1, s1, i1, r2, s2, i2):
     return result    
     
 def division(r1, s1, i1, r2, s2, i2):
-    # Function divide two komplex numbers
+    
     numerator = []
     denominator = []
     result = []
@@ -118,7 +118,7 @@ def division(r1, s1, i1, r2, s2, i2):
     return result
 
 def record_in_file(result):
-    # Added results in file'''
+   
     with open('results.txt', 'a') as data:
         if result[1] != 0:
             for i in range(0, 2):
